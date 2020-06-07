@@ -1,0 +1,341 @@
+
+<!DOCTYPE html>
+<html>
+<title>MQ</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta property="og:image" content="vr.png" />
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif;}
+body, html {
+    height: 100%;
+    color: #777;
+    line-height: 1.8;
+}
+
+/* Create a Parallax Effect */
+.bgimg-1, .bgimg-2, .bgimg-3 {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* First image (Logo. Full height) */
+.bgimg-1 {
+    background-image: url('bgimg.png');
+    min-height: 4%;
+}
+
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("sunset.png");
+    min-height: 400px;
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("camp.jpg");
+    min-height: 400px;
+}
+
+.w3-wide {letter-spacing: 10px;}
+.w3-hover-opacity {cursor: pointer;}
+
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+        background-attachment: scroll;
+    }
+}
+</style>
+<body>
+
+<img src="vr.png" style="width:0;height:0;position:relative;float:left;" class="w3-hover-opacity" alt="VR Dungeon Crawler">
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar" id="myNavbar">
+    <a class="w3-bar-item w3-button w3-hover-black w3-hide-medium w3-hide-large w3-right" href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+      <i class="fa fa-bars"></i>
+    </a>
+    <a href="#home" class="w3-bar-item w3-button">HOME</a>
+    <a href="#about" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-user"></i> ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-th"></i> PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-hide-small"><i class="fa fa-envelope"></i> CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-red">
+      <i class="fa fa-search"></i>
+    </a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium">
+    <a href="#about" class="w3-bar-item w3-button" onclick="toggleFunction()">ABOUT</a>
+    <a href="#portfolio" class="w3-bar-item w3-button" onclick="toggleFunction()">PORTFOLIO</a>
+    <a href="#contact" class="w3-bar-item w3-button" onclick="toggleFunction()">CONTACT</a>
+    <a href="#" class="w3-bar-item w3-button">SEARCH</a>
+  </div>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<!-- <div style="height:50vw;" class="bgimg-1 w3-display-container w3-opacity-min" id="home"> -->
+<div style="height:50vw;" class="bgimg-1 w3-display-container" id="home"> 
+  <video style="z-index:-30;transform: translateX(-5%) translateY(-20%);height:148%;width:112vw;" poster="bgimg.png" id="bgvid" autoplay muted loop>
+  <source src="https://dl.dropboxusercontent.com/s/pzdsrzdoeeb3spw/attempt2.m4v?dl=0" type="video/mp4">
+  </video> 
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <span class="w3-center w3-padding-large w3-black w3-xlarge w3-wide w3-animate-opacity">Matt <span class="w3-hide-small"></span> Quinn</span>
+  </div>
+</div>
+<!-- Container (About Section) -->
+<div style="float:right;position:relative; width:70vw;right:15vw;z-index:0;background-color:#FFFFFF" class="w3-content w3-container" id="about">
+  <h3 class="w3-center">ABOUT ME</h3>
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-padding-large">
+      <img src="vr.png" style="width:0;height:0;position:relative;float:left;" class="w3-hover-opacity" alt="VR Dungeon Crawler">
+      <img src="https://raw.githubusercontent.com/mquinn4011/mquinn4011.github.io/master/me.jpg" class="w3-round w3-image w3-opacity-off w3-hover-opacity-off" alt="Me" width="300" height="200">
+    </div>
+
+    <!-- Hide this text on small devices -->
+    <div style="text-align:justify;margin-top:3vh;" class="w3-col m6 w3-hide-small w3-padding-large">
+      <p>A gameplay engineer and VR enthusiast, I’ve spent the last 10 years building the skills needed to create immersive, awe-inspiring virtual experiences. My passion for the gaming industry is second to none, and I’ve used this to drive me to learn, grow, and build some incredible worlds from the ground up. I currently work with ILMxLAB on our upcoming Star Wars experience, “Vader Immortal”, coming soon to the new Oculus Quest. Favorite video games include Baldur’s Gate, Diablo, Horizon: Zero Dawn, Hollow Knight, and Dark Souls. <i class="fa fa-fire"></i></p>
+    </div>
+  </div>
+  <p style="margin-top:8vh" class="w3-large w3-center">Skills</p>
+  <p class="w3-wide"><i class="fa fa-ravelry"></i>Unity/UE4</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-laptop"></i>C++/C#</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-grav"></i>Oculus/VR</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:80%">80%</div>
+  </div>
+  <p class="w3-wide"><i class="fa fa-photo"></i>Asset Development</p>
+  <div class="w3-light-grey">
+    <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
+  </div>
+  <p></p>
+</div>
+
+<div style="background-color:#FFFFFF" class="w3-row w3-center w3-padding-16">
+  <!-- <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">14+</span><br>
+    Partners
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">55+</span><br>
+    Projects Done
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">89+</span><br>
+    Happy Clients
+  </div>
+  <div class="w3-quarter w3-section">
+    <span class="w3-xlarge">150+</span><br>
+    Meetings
+  </div> -->
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div style="position:relative; right:0%;z-index:0;background-color:#FFFFFF" class="w3-content w3-container w3-padding-64" id="portfolio">
+  <h3 class="w3-center">MY WORK</h3>
+  <p class="w3-center"><em>Here's some of my latest work.<br> Click the images for more information</em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <a href="https://www.youtube.com/watch?v=1TCzdtzy6FY&t=11s"><img src="vr.png" style="width:100%" class="w3-hover-opacity" alt="VR Dungeon Crawler"></a>
+    </div>
+
+    <div class="w3-col m3">
+      <img src="bendingstill.png" style="width:100%" onclick="vidClick(this)" class="w3-hover-opacity" alt="Earthbending Soldier">
+    </div>
+
+    <div class="w3-col m3">
+      <a href="http://mquinn4011.github.io/VoiceToLatex/"> <img src="voicetolatex.png" style="width:100%" class="w3-hover-opacity" alt="VoiceToLatex"></a>
+    </div>
+
+    <div class="w3-col m3">
+      <img src="snake.png" style="width:100%" onclick="vid1Click(this)" class="w3-hover-opacity" alt="42-line snake">
+    </div>
+  </div>
+
+  <div style="margin-left:12vw" class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="alleycats.png" style="width:100%" onclick="vid2Click(this)" class="w3-hover-opacity" alt="AlleyCats">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="gypsy.png" style="width:100%" onclick="vid3Click(this)" class="w3-hover-opacity" alt="Visualizer">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="terraria.png" style="width:100%" onclick="vid4Click(this)" class="w3-hover-opacity" alt="Terraria Clone">
+    </div>
+
+    <!-- <div class="w3-col m3">
+      <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
+    </div>
+    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button> -->
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+  <div id="contain" class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <video poster="bendingstill.png" id="bendvid" autoplay muted loop>
+    </video> 
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container w3-opacity-min">
+  <div class="w3-display-middle">
+     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64" id="contact">
+  <h3 class="w3-center">WHERE I WORK</h3>
+
+  <div style="margin-left:13vw" class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="w3-round-large w3-greyscale" style="width:110%;height:400px;"></div>
+    </div>
+    <div class="w3-col m8 w3-panel">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Berkeley CA, US<br>
+        <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +508 365 8056<br>
+        <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mquinn4011@gmail.com<br>
+      </div>
+      <p>Swing by for a cup of <i class="fa fa-coffee"></i>, or shoot me an email.
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-black w3-padding-64 w3-opacity w3-hover-opacity-off">
+  <a href="#home" class="w3-button w3-light-grey"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <div class="w3-xlarge w3-section">
+    <a href="https://www.linkedin.com/in/mbquinn/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
+  </div>
+  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
+</footer>
+ 
+<!-- Add Google Maps -->
+<script>
+function myMap()
+{
+  myCenter=new google.maps.LatLng(37.875121, -122.257271);
+  var mapOptions= {
+    center:myCenter,
+    zoom:12, scrollwheel: false, draggable: false,
+    mapTypeId:google.maps.MapTypeId.ROADMAP
+  };
+  var map=new google.maps.Map(document.getElementById("googleMap"),mapOptions);
+
+  var marker = new google.maps.Marker({
+    position: myCenter,
+  });
+  marker.setMap(map);
+}
+
+// Modal Image Gallery
+function onClick(element) { 
+  document.getElementById("bendvid").src = null;
+  document.getElementById("bendvid").style = "width:0%;";
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+function vidClick(element) {
+  document.getElementById("bendvid").src = "bending.mov";
+  document.getElementById("bendvid").style = "position:relative;left:23%;width:100%;height:100%;transform: translateX(-25%) translateY(-25%);";
+  document.getElementById("img01").src = null;
+  document.getElementById("modal01").style.display = "block";
+  document.getElementById("caption").innerHTML = "<p>My first shot at an animation sequence in Maya. Inspired by Avatar, The Last Airbender. Free model/rig belongs to 'DaDoOmShRoOm' on highend3d.com.</p>";
+}
+
+function vid1Click(element) {
+  document.getElementById("bendvid").src = "snake.mov";
+  document.getElementById("bendvid").style = "position: relative;left:23%;width:100%;height:100%;transform:translateX(-25%) translateY(-25%);";
+  document.getElementById("img01").src = null;
+  document.getElementById("modal01").style.display = "block";
+  document.getElementById("caption").innerHTML = "<p>Attempt at coding shortest possible version of 'Snake'. This one is a whopping 41 lines of python.</p>";
+}
+
+function vid2Click(element) {
+  document.getElementById("bendvid").src = "alleycats.mov";
+  document.getElementById("bendvid").style = "position: relative;left:23%;width:100%;height:100%;transform:translateX(-25%) translateY(-25%);";
+  document.getElementById("img01").src = null;
+  document.getElementById("modal01").style.display = "block";
+  document.getElementById("caption").innerHTML = "<p>'Alleycats' is one of the first video games I put together in pygame with one of my students. All design decisions were made by the 12 year old I was teaching, and I used the game engine as a means to explain how conditionals, data structures, and loops worked.</p>";
+}
+
+function vid3Click(element) {
+  document.getElementById("bendvid").src = "gypsy.mov";
+  document.getElementById("bendvid").style = "position: relative;left:23%;width:100%;height:100%;transform:translateX(-25%) translateY(-25%);";
+  document.getElementById("img01").src = null;
+  document.getElementById("modal01").style.display = "block";
+  document.getElementById("caption").innerHTML = "<p>Using a Fourier Transformer written by a friend, I was able to break down the data in a .wav file, store hertz values in an output buffer, and then read that stream with a visualizer written in the pygame module.</p>";
+}
+
+function vid4Click(element) {
+  document.getElementById("bendvid").src = "terraria.mov";
+  document.getElementById("bendvid").style = "position: relative;left:23%;width:100%;height:100%;transform:translateX(-25%) translateY(-25%);";
+  document.getElementById("img01").src = null;
+  document.getElementById("modal01").style.display = "block";
+  document.getElementById("caption").innerHTML = "<p>Arguably one of the more complicated projects I've ever undertaken with one of my students, this Terraria clone ended up being somewhere around 1500 lines. This was before code cleanliness was of importance, though; the game development was a learning experience for both me and the kid I was teaching.</p>";
+}
+
+
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-bar" + " w3-card-2" + " w3-animate-top" + " w3-white";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-white", "");
+    }
+}
+
+// Used to toggle the menu on small screens when clicking on the menu button
+function toggleFunction() {
+    var x = document.getElementById("navDemo");
+    if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+    } else {
+        x.className = x.className.replace(" w3-show", "");
+    }
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZhroHo3Z7qCFjd6htX52eRg43W5F8sl4&callback=myMap"></script>
+<!--
+To use this code on your website, get a free API key from Google.
+Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp
+-->
+
+</body>
+</html>
