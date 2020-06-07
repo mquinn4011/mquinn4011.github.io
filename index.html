@@ -16,6 +16,20 @@ body, html {
     line-height: 1.8;
 }
 
+
+a:link {
+  color:black;
+  text-decoration: underline;
+}
+
+/* mouse over link */
+a:hover {
+  color:white;
+  background-color: black;
+  text-decoration: underline;
+}
+
+
 /* Create a Parallax Effect */
 .bgimg-1, .bgimg-2, .bgimg-3 {
     background-attachment: fixed;
@@ -32,13 +46,13 @@ body, html {
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-    background-image: url("sunset.png");
+    background-image: url("marina.jpg");
     min-height: 400px;
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
-    background-image: url("camp.jpg");
+    background-image: url("freddie.jpg");
     min-height: 400px;
 }
 
@@ -92,20 +106,20 @@ body, html {
 </div>
 <!-- Container (About Section) -->
 <div style="float:right;position:relative; width:70vw;right:15vw;z-index:0;background-color:#FFFFFF" class="w3-content w3-container" id="about">
-  <h3 class="w3-center">ABOUT ME</h3>
+  <h3 style="margin-top:5vh" class="w3-center">ABOUT ME</h3>
   <div class="w3-row">
-    <div class="w3-col m6 w3-center w3-padding-large">
+    <div style="margin-top:3vh" class="w3-col m6 w3-center w3-padding-large">
       <img src="vr.png" style="width:0;height:0;position:relative;float:left;" class="w3-hover-opacity" alt="VR Dungeon Crawler">
-      <img src="https://raw.githubusercontent.com/mquinn4011/mquinn4011.github.io/master/me.jpg" class="w3-round w3-image w3-opacity-off w3-hover-opacity-off" alt="Me" width="300" height="200">
+      <img src="https://raw.githubusercontent.com/mquinn4011/mquinn4011.github.io/master/me.jpg" class="w3-round w3-image w3-opacity-off w3-hover-opacity-off" alt="Me" width="400" height="200">
     </div>
 
     <!-- Hide this text on small devices -->
-    <div style="text-align:justify;margin-top:3vh;" class="w3-col m6 w3-hide-small w3-padding-large">
-      <p>A gameplay engineer and VR enthusiast, I’ve spent the last 10 years building the skills needed to create immersive, awe-inspiring virtual experiences. My passion for the gaming industry is second to none, and I’ve used this to drive me to learn, grow, and build some incredible worlds from the ground up. I currently work with ILMxLAB on our upcoming Star Wars experience, “Vader Immortal”, coming soon to the new Oculus Quest. Favorite video games include Baldur’s Gate, Diablo, Horizon: Zero Dawn, Hollow Knight, and Dark Souls. <i class="fa fa-fire"></i></p>
+    <div style="text-align:Justify;margin-top:5vh;" class="w3-col m6 w3-padding-large">
+      <p>Worldbuilding has been an important part of my life for a very long time. Ever since I was a kid, I've been a huge fan of high fantasy, and have daydreamt about worlds where magic and the supernatural are commonplace. As a gameplay engineer, the advent of VR has been incredible, giving me the tools to craft the immersive, awe-inspiring worlds I dreamt of when I was younger. Two years ago I joined the team at ILMxLAB, helping release <a href="https://www.youtube.com/watch?v=rWfcMwMzfag" target="_blank">"Vader Immortal"</a> in 2019. Currently, we are working on a new title, <a href="https://www.starwars.com/news/star-wars-tales-from-the-galaxys-edge" target="_blank">"Star Wars: Tales from the Galaxy's Edge"</a> for the Oculus Quest. My favorite games include Magic: The Gathering, Baldur’s Gate, Diablo, Dragon Age, Horizon: Zero Dawn, Hollow Knight, and Dark Souls. <i class="fa fa-fire"></i></p>
     </div>
   </div>
   <p style="margin-top:8vh" class="w3-large w3-center">Skills</p>
-  <p class="w3-wide"><i class="fa fa-ravelry"></i>Unity/UE4</p>
+  <p class="w3-wide"><i class="fa fa-ravelry"></i>UE4/Unity</p>
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:90%">90%</div>
   </div>
@@ -117,7 +131,7 @@ body, html {
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:80%">80%</div>
   </div>
-  <p class="w3-wide"><i class="fa fa-photo"></i>Asset Development</p>
+  <p class="w3-wide"><i class="fa fa-photo"></i>Tool Development</p>
   <div class="w3-light-grey">
     <div class="w3-container w3-padding-small w3-dark-grey w3-center" style="width:75%">75%</div>
   </div>
@@ -146,14 +160,13 @@ body, html {
 <!-- Second Parallax Image with Portfolio Text -->
 <div class="bgimg-2 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-    <span class="w3-xxlarge w3-text-white w3-wide">PORTFOLIO</span>
+    <span style="background-color: white;" class="w3-xxlarge w3-text-black w3-wide">PORTFOLIO</span>
   </div>
 </div>
 
 <!-- Container (Portfolio Section) -->
 <div style="position:relative; right:0%;z-index:0;background-color:#FFFFFF" class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">MY WORK</h3>
-  <p class="w3-center"><em>Here's some of my latest work.<br> Click the images for more information</em></p><br>
+  <h3 style="margin-bottom:8vh;" class="w3-center">MY WORK</h3>
 
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
@@ -162,35 +175,12 @@ body, html {
     </div>
 
     <div class="w3-col m3">
-      <img src="bendingstill.png" style="width:100%" onclick="vidClick(this)" class="w3-hover-opacity" alt="Earthbending Soldier">
-    </div>
-
-    <div class="w3-col m3">
       <a href="http://mquinn4011.github.io/VoiceToLatex/"> <img src="voicetolatex.png" style="width:100%" class="w3-hover-opacity" alt="VoiceToLatex"></a>
     </div>
 
     <div class="w3-col m3">
-      <img src="snake.png" style="width:100%" onclick="vid1Click(this)" class="w3-hover-opacity" alt="42-line snake">
-    </div>
-  </div>
-
-  <div style="margin-left:12vw" class="w3-row-padding w3-center w3-section">
-    <div class="w3-col m3">
-      <img src="alleycats.png" style="width:100%" onclick="vid2Click(this)" class="w3-hover-opacity" alt="AlleyCats">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="gypsy.png" style="width:100%" onclick="vid3Click(this)" class="w3-hover-opacity" alt="Visualizer">
-    </div>
-
-    <div class="w3-col m3">
-      <img src="terraria.png" style="width:100%" onclick="vid4Click(this)" class="w3-hover-opacity" alt="Terraria Clone">
-    </div>
-
-    <!-- <div class="w3-col m3">
-      <img src="/w3images/p8.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Sailing">
-    </div>
-    <button class="w3-button w3-padding-large w3-light-grey" style="margin-top:64px">LOAD MORE</button> -->
+        <a href="https://www.oculus.com/vader-immortal/?locale=en_US"> <img src="vader.png" style="width:100%" class="w3-hover-opacity" alt="Vader Immortal"></a>
+      </div>
   </div>
 </div>
 
@@ -208,14 +198,13 @@ body, html {
 <!-- Third Parallax Image with Portfolio Text -->
 <div class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
-     <span class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
+     <span style="background-color: black;" class="w3-xxlarge w3-text-white w3-wide">CONTACT</span>
   </div>
 </div>
 
 <!-- Container (Contact Section) -->
 <div class="w3-content w3-container w3-padding-64" id="contact">
-  <h3 class="w3-center">WHERE I WORK</h3>
-
+  <h2 class="w3-center">ILMxLAB</h2>
   <div style="margin-left:13vw" class="w3-row w3-padding-32 w3-section">
     <div class="w3-col m4 w3-container">
       <!-- Add Google Maps -->
@@ -223,7 +212,7 @@ body, html {
     </div>
     <div class="w3-col m8 w3-panel">
       <div class="w3-large w3-margin-bottom">
-        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Berkeley CA, US<br>
+        <i class="fa fa-map-marker fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> 1 Letterman Drive, San Francisco CA, US<br>
         <i class="fa fa-phone fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Phone: +508 365 8056<br>
         <i class="fa fa-envelope fa-fw w3-hover-text-black w3-xlarge w3-margin-right"></i> Email: mquinn4011@gmail.com<br>
       </div>
@@ -238,14 +227,13 @@ body, html {
   <div class="w3-xlarge w3-section">
     <a href="https://www.linkedin.com/in/mbquinn/"><i class="fa fa-linkedin w3-hover-opacity"></i></a>
   </div>
-  <p>Powered by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">w3.css</a></p>
 </footer>
  
 <!-- Add Google Maps -->
 <script>
 function myMap()
 {
-  myCenter=new google.maps.LatLng(37.875121, -122.257271);
+  myCenter=new google.maps.LatLng(37.798590, -122.450315);
   var mapOptions= {
     center:myCenter,
     zoom:12, scrollwheel: false, draggable: false,
