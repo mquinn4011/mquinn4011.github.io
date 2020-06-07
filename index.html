@@ -4,7 +4,6 @@
 <title>MQ</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta property="og:image" content="vr.png" />
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -40,19 +39,18 @@ a:hover {
 
 /* First image (Logo. Full height) */
 .bgimg-1 {
-    background-image: url('bgimg.png');
     min-height: 4%;
 }
 
 /* Second image (Portfolio) */
 .bgimg-2 {
-    background-image: url("media/marina.jpg");
+    background-image: url("https://raw.githubusercontent.com/mquinn4011/mquinn4011.github.io/master/media/marina.jpg");
     min-height: 400px;
 }
 
 /* Third image (Contact) */
 .bgimg-3 {
-    background-image: url("media/freddie.jpg");
+    background-image: url("https://raw.githubusercontent.com/mquinn4011/mquinn4011.github.io/master/media/freddie.jpg");
     min-height: 400px;
 }
 
@@ -67,8 +65,6 @@ a:hover {
 }
 </style>
 <body>
-
-<img src="vr.png" style="width:0;height:0;position:relative;float:left;" class="w3-hover-opacity" alt="VR Dungeon Crawler">
 
 <!-- Navbar (sit on top) -->
 <div class="w3-top">
@@ -97,7 +93,7 @@ a:hover {
 <!-- First Parallax Image with Logo Text -->
 <!-- <div style="height:50vw;" class="bgimg-1 w3-display-container w3-opacity-min" id="home"> -->
 <div style="height:50vw;" class="bgimg-1 w3-display-container" id="home"> 
-  <video style="z-index:-30;transform: translateX(-18%) translateY(-10%);height:148%;width:154vw;" poster="bgimg.png" id="bgvid" autoplay muted loop>
+  <video style="z-index:-30;transform: translateX(-18%) translateY(-10%);height:148%;width:154vw;" poster="https://raw.githubusercontent.com/mquinn4011/mquinn4011.github.io/master/media/marina.jpg" id="bgvid" autoplay muted loop>
   <source src="https://raw.githubusercontent.com/mquinn4011/mquinn4011.github.io/master/media/VITrailer.mp4" type="video/mp4">
   </video> 
   <div class="w3-display-middle" style="white-space:nowrap;">
@@ -187,17 +183,6 @@ a:hover {
   </div>
 </div>
 
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-large w3-black w3-display-topright" title="Close Modal Image"><i class="fa fa-remove"></i></span>
-  <div id="contain" class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <video poster="bendingstill.png" id="bendvid" autoplay muted loop>
-    </video> 
-    <p id="caption" class="w3-opacity w3-large"></p>
-  </div>
-</div>
-
 <!-- Third Parallax Image with Portfolio Text -->
 <div class="bgimg-3 w3-display-container w3-opacity-min">
   <div class="w3-display-middle">
@@ -233,7 +218,7 @@ a:hover {
 </footer>
  
 <!-- Add Google Maps -->
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+<script type="text/javascript" src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 function myMap()
 {
@@ -250,57 +235,6 @@ function myMap()
   });
   marker.setMap(map);
 }
-
-// Modal Image Gallery
-function onClick(element) { 
-  document.getElementById("bendvid").src = null;
-  document.getElementById("bendvid").style = "width:0%;";
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-function vidClick(element) {
-  document.getElementById("bendvid").src = "bending.mov";
-  document.getElementById("bendvid").style = "position:relative;left:23%;width:100%;height:100%;transform: translateX(-25%) translateY(-25%);";
-  document.getElementById("img01").src = null;
-  document.getElementById("modal01").style.display = "block";
-  document.getElementById("caption").innerHTML = "<p>My first shot at an animation sequence in Maya. Inspired by Avatar, The Last Airbender. Free model/rig belongs to 'DaDoOmShRoOm' on highend3d.com.</p>";
-}
-
-function vid1Click(element) {
-  document.getElementById("bendvid").src = "snake.mov";
-  document.getElementById("bendvid").style = "position: relative;left:23%;width:100%;height:100%;transform:translateX(-25%) translateY(-25%);";
-  document.getElementById("img01").src = null;
-  document.getElementById("modal01").style.display = "block";
-  document.getElementById("caption").innerHTML = "<p>Attempt at coding shortest possible version of 'Snake'. This one is a whopping 41 lines of python.</p>";
-}
-
-function vid2Click(element) {
-  document.getElementById("bendvid").src = "alleycats.mov";
-  document.getElementById("bendvid").style = "position: relative;left:23%;width:100%;height:100%;transform:translateX(-25%) translateY(-25%);";
-  document.getElementById("img01").src = null;
-  document.getElementById("modal01").style.display = "block";
-  document.getElementById("caption").innerHTML = "<p>'Alleycats' is one of the first video games I put together in pygame with one of my students. All design decisions were made by the 12 year old I was teaching, and I used the game engine as a means to explain how conditionals, data structures, and loops worked.</p>";
-}
-
-function vid3Click(element) {
-  document.getElementById("bendvid").src = "gypsy.mov";
-  document.getElementById("bendvid").style = "position: relative;left:23%;width:100%;height:100%;transform:translateX(-25%) translateY(-25%);";
-  document.getElementById("img01").src = null;
-  document.getElementById("modal01").style.display = "block";
-  document.getElementById("caption").innerHTML = "<p>Using a Fourier Transformer written by a friend, I was able to break down the data in a .wav file, store hertz values in an output buffer, and then read that stream with a visualizer written in the pygame module.</p>";
-}
-
-function vid4Click(element) {
-  document.getElementById("bendvid").src = "terraria.mov";
-  document.getElementById("bendvid").style = "position: relative;left:23%;width:100%;height:100%;transform:translateX(-25%) translateY(-25%);";
-  document.getElementById("img01").src = null;
-  document.getElementById("modal01").style.display = "block";
-  document.getElementById("caption").innerHTML = "<p>Arguably one of the more complicated projects I've ever undertaken with one of my students, this Terraria clone ended up being somewhere around 1500 lines. This was before code cleanliness was of importance, though; the game development was a learning experience for both me and the kid I was teaching.</p>";
-}
-
 
 // Change style of navbar on scroll
 window.onscroll = function() {myFunction()};
