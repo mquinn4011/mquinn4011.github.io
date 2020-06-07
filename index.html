@@ -114,7 +114,7 @@ a:hover {
 
     <!-- Hide this text on small devices -->
     <div style="text-align:Justify;margin-top:5vh;" class="w3-col m6 w3-padding-large">
-      <p>Worldbuilding has been an important part of my life for a very long time. Ever since I was a kid, I've been a huge fan of high fantasy, and have daydreamt about worlds where magic and the supernatural are commonplace. As a gameplay engineer, the advent of VR has been incredible, giving me the tools to craft the immersive, awe-inspiring worlds I dreamt of when I was younger. Two years ago I joined the team at ILMxLAB, helping release <a href="https://www.youtube.com/watch?v=rWfcMwMzfag" target="_blank">"Vader Immortal"</a> in 2019. Currently, we are working on a new title, <a href="https://www.starwars.com/news/star-wars-tales-from-the-galaxys-edge" target="_blank">"Star Wars: Tales from the Galaxy's Edge"</a> for the Oculus Quest. My favorite games include Magic: The Gathering, Baldur’s Gate, Diablo, Dragon Age, Horizon: Zero Dawn, Hollow Knight, and Dark Souls. <i class="fa fa-fire"></i></p>
+      <p>Worldbuilding has been an important part of my life for a very long time. Ever since I was a kid, I've been a huge fan of high fantasy, and have daydreamt about worlds where magic and the supernatural are commonplace. As a gameplay engineer, the advent of VR has been incredible, giving me the tools to craft the immersive, awe-inspiring worlds I dreamt of when I was younger. Two years ago I joined the team at ILMxLAB, helping release <a href="https://www.youtube.com/watch?v=rWfcMwMzfag" target="_blank">"Vader Immortal"</a> in 2019. Currently, we are working on a new title, <a href="https://www.starwars.com/news/star-wars-tales-from-the-galaxys-edge" target="_blank">"Star Wars: Tales from the Galaxy's Edge"</a> for the Oculus Quest. My favorite games include Magic: The Gathering, Baldur’s Gate, Diablo, Dragon Age, Breath of the Wild, Horizon: Zero Dawn, Hollow Knight, and Dark Souls. <i class="fa fa-fire"></i></p>
     </div>
   </div>
   <p style="margin-top:8vh" class="w3-large w3-center">Skills</p>
@@ -170,16 +170,20 @@ a:hover {
   <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
   <div class="w3-row-padding w3-center">
     <div class="w3-col m3">
-      <a href="https://www.youtube.com/watch?v=1TCzdtzy6FY&t=11s" target="_blank"><img src="media/vr.png" style="width:100%" class="w3-hover-opacity" alt="VR Dungeon Crawler"></a>
+      <a href="https://www.youtube.com/watch?v=1TCzdtzy6FY&t=11s" target="_blank"><img src="https://raw.githubusercontent.com/mquinn4011/mquinn4011.github.io/master/media/vr.png" style="width:100%" class="w3-hover-opacity" alt="VR Dungeon Crawler"></a>
     </div>
 
     <div class="w3-col m3">
-      <a href="http://mquinn4011.github.io/VoiceToLatex/" target="_blank"> <img src="media/voicetolatex.png" style="width:100%" class="w3-hover-opacity" alt="VoiceToLatex"></a>
+      <a href="http://mquinn4011.github.io/VoiceToLatex/" target="_blank"> <img src="https://raw.githubusercontent.com/mquinn4011/mquinn4011.github.io/master/media/voicetolatex.png" style="width:100%" class="w3-hover-opacity" alt="VoiceToLatex"></a>
     </div>
 
     <div class="w3-col m3">
-        <a href="https://www.oculus.com/vader-immortal/?locale=en_US" target="_blank"> <img src="media/vader.png" style="width:100%" class="w3-hover-opacity" alt="Vader Immortal"></a>
-      </div>
+        <a href="https://www.oculus.com/vader-immortal/?locale=en_US" target="_blank"> <img src="https://raw.githubusercontent.com/mquinn4011/mquinn4011.github.io/master/media/vader.png" style="width:100%" class="w3-hover-opacity" alt="Vader Immortal"></a>
+    </div>
+    <div class="w3-col m3">
+        <input id="submitbutton" type="submit" value="Test Send Data">
+    </div>
+
   </div>
 </div>
 
@@ -229,6 +233,7 @@ a:hover {
 </footer>
  
 <!-- Add Google Maps -->
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
 <script>
 function myMap()
 {
@@ -317,6 +322,26 @@ function toggleFunction() {
         x.className = x.className.replace(" w3-show", "");
     }
 }
+
+function postData(input) {
+    $.ajax({
+        type: "POST",
+        url: "https://raw.githubusercontent.com/mquinn4011/mquinn4011.github.io/master/test.py",
+        data: { param: input },
+        success: callbackFunc
+    });
+}
+
+function callbackFunc(response) {
+    // do something with the response
+    console.log(response);
+}
+
+$('#submitbutton').click(function(){
+    datatosend = 'this is my test';
+    postData(datatosend);
+});
+
 </script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCZhroHo3Z7qCFjd6htX52eRg43W5F8sl4&callback=myMap"></script>
 <!--
